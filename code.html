@@ -1,0 +1,1037 @@
+<!DOCTYPE html><html lang="zh-Hant" class="scroll-smooth" style=""><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix, Fung Lam Chan 陳鳳琳 | Writer, Creator, Observer, adventurer</title>
+  
+  <!-- Google Fonts: Cormorant Garamond (Classical Literary Serif), Outfit (Modern Literary Sans), Noto Serif TC, Liu Jian Mao Cao (Fallback Flowing Calligraphy) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Liu+Jian+Mao+Cao&amp;family=Noto+Serif+TC:wght@300;400;500;600&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            serif: ['"Noto Serif TC"', '"Cormorant Garamond"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif'],
+            slogan: [
+              '"Times New Roman"',
+              'Times',
+              '"Noto Serif TC"',
+              'serif'
+            ],
+          },
+          colors: {
+            pearl: {
+              50: '#FFF5F8',
+              100: '#FFE8F1',
+              200: '#FFD2E2',
+              300: '#FFA4C7',
+              400: '#FF6EA6',
+              500: '#FF3E88',
+              600: '#D62262',
+              700: '#B0164D',
+              800: '#8C123D',
+              900: '#540823',
+            },
+            chrome: {
+              silver: '#EEF2F7',
+              border: 'rgba(240, 244, 252, 0.9)',
+              glow: 'rgba(214, 34, 98, 0.28)',
+            }
+          },
+          animation: {
+            'twinkle': 'twinkle 3.8s ease-in-out infinite',
+            'twinkle-slow': 'twinkle 6.5s ease-in-out infinite',
+            'float-soft': 'floatSoft 9s ease-in-out infinite',
+            'shimmer-shift': 'shimmer 7s linear infinite',
+          },
+          keyframes: {
+            twinkle: {
+              '0%, 100%': { opacity: '0.25', transform: 'scale(0.85) rotate(0deg)' },
+              '50%': { opacity: '1', transform: 'scale(1.28) rotate(16deg)' },
+            },
+            floatSoft: {
+              '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+              '50%': { transform: 'translateY(-16px) scale(1.02)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+              '100%': { backgroundPosition: '0% 50%' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 珍珠貝母與深粉光學漸變背景 */
+    body {
+      background: linear-gradient(135deg, #FFF0F5 0%, #FDF4F9 22%, #F1F5FD 52%, #FCEEF6 82%, #FFF2F7 100%);
+      color: #2D3748;
+      overflow-x: hidden;
+      font-family: 'Outfit', 'Noto Serif TC', sans-serif;
+      position: relative;
+    }
+
+    /* 虹彩珠光反射紋理 */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 18% 12%, rgba(255, 110, 166, 0.28) 0%, transparent 45%),
+        radial-gradient(circle at 86% 28%, rgba(214, 34, 98, 0.18) 0%, transparent 48%),
+        radial-gradient(circle at 50% 82%, rgba(198, 214, 255, 0.38) 0%, transparent 52%),
+        radial-gradient(circle at 80% 92%, rgba(255, 210, 226, 0.35) 0%, transparent 46%);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    /* 珠光母貝流動毛玻璃卡片 */
+    .pearl-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 240, 248, 0.78) 45%, rgba(246, 250, 255, 0.88) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 
+        0 14px 36px -10px rgba(214, 34, 98, 0.16),
+        0 6px 18px -4px rgba(160, 175, 205, 0.22),
+        inset 0 1.5px 2px #FFFFFF,
+        inset 0 -1.5px 2px rgba(255, 164, 199, 0.2);
+      transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .pearl-card:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 235, 246, 0.88) 45%, rgba(242, 248, 255, 0.95) 100%);
+      border-color: rgba(255, 110, 166, 0.75);
+      box-shadow: 
+        0 24px 50px -12px rgba(214, 34, 98, 0.28),
+        0 10px 24px -5px rgba(140, 155, 185, 0.26),
+        0 0 22px rgba(255, 164, 199, 0.38),
+        inset 0 2px 4px #FFFFFF;
+    }
+
+    /* 液態銀膠囊按鈕 */
+    .silver-pill {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 248, 254, 0.92) 50%, rgba(255, 242, 249, 0.92) 100%);
+      border: 1px solid rgba(215, 225, 240, 0.9);
+      box-shadow: 
+        0 3px 12px rgba(160, 175, 200, 0.18),
+        inset 0 1px 2px #FFFFFF;
+      transition: all 0.3s ease;
+    }
+    .silver-pill:hover {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFEBF4 55%, #F0F4FC 100%);
+      border-color: #FFA4C7;
+      box-shadow: 
+        0 6px 20px rgba(214, 34, 98, 0.24),
+        0 0 14px rgba(255, 164, 199, 0.4),
+        inset 0 1px 3px #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* 深粉珍珠霓光主按鈕 */
+    .pearl-glow-btn {
+      background: linear-gradient(135deg, #B0164D 0%, #D62262 38%, #FF3E88 75%, #FFA4C7 100%);
+      background-size: 200% auto;
+      box-shadow: 
+        0 6px 24px rgba(214, 34, 98, 0.38),
+        inset 0 1.5px 2px rgba(255, 255, 255, 0.65);
+      transition: all 0.4s ease;
+    }
+    .pearl-glow-btn:hover {
+      background-position: right center;
+      box-shadow: 
+        0 10px 30px rgba(214, 34, 98, 0.52),
+        0 0 20px rgba(255, 110, 166, 0.65),
+        inset 0 2px 3px #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* 橫向黑白照片專屬 16:9 相框 */
+    .horizontal-photo-frame {
+      background: linear-gradient(145deg, #FFFFFF 0%, #EEF2F7 100%);
+      border: 1.5px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 
+        0 14px 34px -10px rgba(120, 135, 160, 0.28),
+        0 0 0 1px rgba(255, 164, 199, 0.38);
+      position: relative;
+      overflow: hidden;
+    }
+    .horizontal-photo-frame::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -140%; width: 70%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+      transform: skewX(-25deg);
+      transition: 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .horizontal-photo-frame:hover::after {
+      left: 170%;
+    }
+
+    /* 放大後醒目的個人姓名樣式 (Large & Prominent Name) */
+    .author-name-prominent {
+      font-family: 'Times New Roman', Times, 'Cormorant Garamond', 'Noto Serif TC', serif;
+      background: linear-gradient(135deg, #4A051E 0%, #8C123D 25%, #D62262 55%, #FF3E88 80%, #7B88A1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.04em;
+      line-height: 1.18;
+      font-weight: 600;
+      filter: drop-shadow(0 2px 14px rgba(214, 34, 98, 0.16));
+    }
+
+    /* 細緻典雅的標語樣式（Times New Roman，大小與英文相若） */
+    .arphic-calligraphy-slogan {
+      font-family: 'Times New Roman', Times, 'Noto Serif TC', serif;
+      color: #374151;
+      letter-spacing: 0.12em;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* 經典 Cormorant Garamond 英文古典斜體（非手寫） */
+    .classic-garamond-sub {
+      font-family: 'Times New Roman', Times, 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      color: #64748B;
+      letter-spacing: 0.06em;
+      font-weight: 400;
+    }
+
+    .sparkle-icon {
+      filter: drop-shadow(0 0 6px rgba(255, 110, 166, 0.85));
+    }
+  </style>
+</head>
+<body class="selection:bg-pearl-200 selection:text-pearl-900">
+
+  <!-- 動態星芒粒子畫布 (Sparkle Stars Background Canvas) -->
+  <canvas id="sparkle-canvas" class="fixed inset-0 pointer-events-none -z-10" width="1280" height="5141"></canvas>
+
+  <!-- 漂浮星芒裝飾 (Static/Floating CSS Sparkles) -->
+  <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+    <span class="absolute top-24 left-[12%] text-pearl-400 text-lg animate-twinkle select-none sparkle-icon">✦</span>
+    <span class="absolute top-40 right-[15%] text-purple-300 text-xl animate-twinkle-slow select-none sparkle-icon">✧</span>
+    <span class="absolute top-[48%] left-[8%] text-pink-400 text-sm animate-twinkle select-none sparkle-icon">✨</span>
+    <span class="absolute top-[65%] right-[10%] text-pearl-500 text-base animate-twinkle-slow select-none sparkle-icon">✦</span>
+    <span class="absolute bottom-28 left-[22%] text-purple-300 text-lg animate-twinkle select-none sparkle-icon">✧</span>
+    <span class="absolute bottom-44 right-[25%] text-pink-400 text-sm animate-twinkle-slow select-none sparkle-icon">✨</span>
+  </div>
+
+  <!-- 頂部導航 (Navigation) -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/75 border-b border-white/85 shadow-sm transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="group flex items-center gap-3">
+        <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-pearl-500 via-white to-purple-300 p-[1.5px] shadow-sm flex items-center justify-center">
+          <span class="w-full h-full bg-white/95 rounded-full flex items-center justify-center text-sm font-semibold text-pearl-700 font-display">P</span>
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif tracking-widest text-lg font-medium text-slate-800 group-hover:text-pearl-600 transition-colors">陳鳳琳</span>
+          <span class="text-[11px] tracking-widest uppercase text-slate-400 font-sans font-medium -mt-0.5">Phoenix, Fung Lam Chan</span>
+        </div>
+      </a>
+
+      <!-- 導航連結 -->
+      <nav class="hidden md:flex items-center gap-8 text-sm tracking-wide text-slate-600 font-sans font-normal">
+        <a href="#about" class="hover:text-pearl-600 transition-colors flex items-center gap-1.5">
+          <span class="">關於我 About</span>
+        </a>
+        <a href="#works" class="hover:text-pearl-600 transition-colors flex items-center gap-1.5">
+          <span class="">作品一覽 Works</span>
+        </a>
+        <a href="#more-works" class="hover:text-pearl-600 transition-colors flex items-center gap-1.5">
+          <span class="">更多作品 Medium</span>
+        </a>
+        <a href="#contact" class="silver-pill px-4 py-2 rounded-full text-xs font-medium text-slate-700 flex items-center gap-2">
+          <span class="">聯絡方式 Contact</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+        </a>
+      </nav>
+
+      <!-- 手機端捷徑 -->
+      <div class="md:hidden flex items-center">
+        <a href="#contact" class="silver-pill px-3.5 py-1.5 rounded-full text-xs text-slate-700 font-medium">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 pt-10 pb-24">
+
+    <!-- 1. 首頁大圖與標語區 (Hero Section) -->
+    <section class="py-8 md:py-14 flex flex-col items-center text-center relative">
+      
+      <!-- 所在城市標籤 (原句呈現) -->
+      <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/85 border border-white/95 shadow-sm text-xs text-slate-600 tracking-wider mb-6">
+        <span class="text-pearl-500 text-xs">✨</span>
+        <span class="font-sans font-normal">Based in London. Back and Forth to Hong Kong, Macao and Taiwan</span>
+      </div>
+
+      <!-- 個人名稱（大幅放大、視覺主角，深粉珠光液態銀層次） -->
+      <div class="mb-5 max-w-4xl px-4">
+        <h1 class="author-name-prominent text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Phoenix, Fung Lam Chan<br class=""><span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-1 tracking-wider">陳鳳琳</span></h1>
+      </div>
+
+      <!-- 首頁主標語 (Slogan)：細緻化處理，中英文尺寸相若，精巧雅緻 -->
+      <div class="mb-8 space-y-1.5 max-w-2xl px-4">
+        <p class="arphic-calligraphy-slogan text-base sm:text-lg md:text-xl">
+          一讀再讀，我一寫再寫
+        </p>
+        <p class="classic-garamond-sub text-sm sm:text-base md:text-lg">Read again and again, I write on and on.</p>
+      </div>
+
+      <!-- 專業身分 / 職稱（中英對照）原句呈現 -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10"><span class="px-5 py-2 rounded-full bg-white/90 border border-pearl-200 text-slate-700 text-xs sm:text-sm tracking-wider shadow-sm font-sans">
+          Writer
+        </span>
+        <span class="px-5 py-2 rounded-full bg-white/90 border border-purple-200 text-slate-700 text-xs sm:text-sm tracking-wider shadow-sm font-sans">
+          Creator
+        </span>
+        <span class="px-5 py-2 rounded-full bg-white/90 border border-slate-200 text-slate-700 text-xs sm:text-sm tracking-wider shadow-sm font-sans">
+          Observer
+        </span>
+        <span class="px-5 py-2 rounded-full bg-white/90 border border-pearl-200 text-slate-700 text-xs sm:text-sm tracking-wider shadow-sm font-sans">
+          Adventurer
+        </span></div>
+
+      <!-- 兩張打橫的個人大頭 黑白色照預留框架 (Landscape 16:9) -->
+      <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 my-2 text-left">
+        
+        <!-- 橫向照片 1 -->
+        <div class="pearl-card p-4 rounded-3xl group">
+          <div class="horizontal-photo-frame aspect-[16/9] rounded-2xl flex flex-col items-center justify-center relative overflow-hidden bg-slate-900/10">
+            <!-- 直接載入第一張照片 (Google Drive 直連高清圖源，套用黑白濾鏡) -->
+            <img src="https://lh3.googleusercontent.com/d/1wgCxCrOBBQ3nB2MW0v4YzabpgqtabTTX=w1600" alt="Phoenix, Fung Lam Chan 陳鳳琳 - Portrait 1" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1wgCxCrOBBQ3nB2MW0v4YzabpgqtabTTX&amp;sz=w1600';" style="filter: none;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none opacity-40 group-hover:opacity-20 transition-opacity"></div>
+            
+            <span class="absolute bottom-3 right-3 text-[10px] font-sans text-slate-700 bg-white/85 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/80 shadow-sm pointer-events-none">
+              Phoenix · 01
+            </span>
+          </div>
+        </div>
+
+        <!-- 橫向照片 2 -->
+        <div class="pearl-card p-4 rounded-3xl group">
+          <div class="horizontal-photo-frame aspect-[16/9] rounded-2xl flex flex-col items-center justify-center relative overflow-hidden bg-slate-900/10">
+            <!-- 直接載入第二張照片 (Google Drive 直連高清圖源，套用黑白濾鏡) -->
+            <img src="https://lh3.googleusercontent.com/d/1VR4DAdVR5gsDPs8q4LhcZJ7yxWBAAal2=w1600" alt="Phoenix, Fung Lam Chan 陳鳳琳 - Portrait 2" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://drive.google.com/thumbnail?id=1VR4DAdVR5gsDPs8q4LhcZJ7yxWBAAal2&amp;sz=w1600';" style="filter: none;">
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent pointer-events-none opacity-40 group-hover:opacity-20 transition-opacity"></div>
+
+            <span class="absolute bottom-3 right-3 text-[10px] font-sans text-slate-700 bg-white/85 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/80 shadow-sm pointer-events-none">
+              Phoenix · 02
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 2. 關於我 (About Me) - 雙語對照展示 -->
+    <section id="about" class="py-14 scroll-mt-24">
+      <div class="mb-10 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 text-xs font-sans tracking-widest uppercase text-pearl-600 font-semibold mb-2">
+          <span class="">✧</span>
+          <span class="">01 / About Me · 關於我</span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-light">
+          關於我 <span class="text-slate-400 text-xl font-display italic font-light ml-2">About Phoenix</span>
+        </h2>
+      </div>
+
+      <!-- 中英文並排/雙語對照展示區 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-10">
+
+        <!-- 中文版「我是誰」區塊 (原為「中文原句」) -->
+        <div class="pearl-card p-8 rounded-3xl space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-pearl-200/60">
+            <span class="text-xs font-sans uppercase tracking-wider text-pearl-700 font-semibold flex items-center gap-2"><i class="fa-solid fa-user"></i> 繁體中文</span>
+            
+          </div>
+
+          <!-- 段落一 -->
+          <div class="text-slate-700 text-sm sm:text-base font-serif leading-relaxed">中文系及性別研究系畢業，通曉粵語、國語、英文及日文。醉心性別文學及女性主義，現時多創作散文及詩，偶有文化及文學評論見諸各大報刊。</div>
+
+          <!-- 碩士論文摘要 -->
+          <div class="p-6 rounded-2xl bg-white/85 border border-pearl-200/70 shadow-sm space-y-3">
+            <h3 class="font-serif text-base font-semibold text-slate-800 leading-snug">日前完成以英文書寫的碩士論文，題目是重構少女年華﹕日本少女漫畫NANA中的性別、親密關係及浪漫。</h3>
+            <p class="text-xs sm:text-sm text-slate-700 font-serif leading-relaxed">本研究以日本少女漫畫《NANA》為研究對象，探討這部最具代表性和影響力的當代少女漫畫之一如何呈現女性形象和性別角色。過去研究普遍認為，少女漫畫傾向強化傳統的浪漫敘事和性別刻板印象。然而，《NANA》透過主角Nana與Hachi之間的友誼與愛情關係，展現了更為複雜和反思性的女性主體性。本研究採用話語分析和視覺分析方法，並結合女性主義批判框架，檢視漫畫的視覺圖像、內心獨白和敘事內容，分析《NANA》如何在女性主義脈絡下打破傳統少女漫畫的性別模式。研究發現，《NANA》透過描繪女性的性別特質、非規範的親密友誼模式以及異性戀父權制愛情體系下的性別期待，挑戰了以愛為中心的少女漫畫敘事框架，呈現了更為真實的女性體驗。這項研究的意義在於，透過結合東方和西方女性主義理論，《NANA》的分析提出了關於女性身分和關係的新想像和可能性，為研究日本流行文化中的女性主體性提供了寶貴的見解。</p>
+          </div>
+
+          <!-- 出版預備備註 -->
+          <div class="text-slate-700 text-sm font-serif leading-relaxed pt-1">同時近年已撰寫完成關於離散議題、身體政治及殘疾文學研究等內容，正準備刊登。</div>
+        </div>
+
+        <!-- 英文版 原句區塊 -->
+        <div class="pearl-card p-8 rounded-3xl space-y-6">
+          <div class="flex items-center justify-between pb-3 border-b border-pearl-200/60"><span class="text-xs font-sans uppercase tracking-wider text-pearl-700 font-semibold flex items-center gap-2"><i class="fa-solid fa-user"></i> English</span></div>
+
+          <!-- 段落一 原句 -->
+          <div class="text-slate-700 text-sm sm:text-base font-sans leading-relaxed">A writer and researcher with degrees in Chinese Literature and Gender Studies, Phoenix is multilingual in Cantonese, Mandarin, English, and Japanese. Passionate about gender and queer literature, she is currently working on her own literary projects exploring gender topics. Her primary creative focus lies in prose and poetry, alongside cultural and literary reviews published in major newspapers and periodicals.</div>
+
+          <!-- 碩士論文摘要 原句 -->
+          <div class="p-6 rounded-2xl bg-white/85 border border-pearl-200/70 shadow-sm space-y-3">
+            <h3 class="font-sans text-sm font-semibold text-slate-800 leading-snug">In September 2026, She finished her Master’s thesis in English, Topic is Reconstructing the Myth of Girl: Gender, Intimacy and Romance in a Japanese Shōjo Manga NANA</h3>
+            <p class="text-xs text-slate-700 font-sans leading-relaxed">This study takes a Japanese Shōjo manga NANA, as its research subject, exploring how one of the most representative and influential contemporary Shōjo manga presents female images and gender roles. Previous research has generally concluded that Shōjo manga tends to reinforce traditional romantic narratives and gender stereotypes. However, NANA, through the friendship and romantic relationship between the protagonists Nana and Hachi, showcases a more complex and reflective female subjectivity. This study employs discourse and visual analysis, combined with a feminist critical approach framework, to examine the manga visual image, inner dialogue and narrative content, analysing how NANA deconstrusts the gender formula of traditional Shōjo manga through feminist context. The study finds that NANA, by depicting female gender traits, non-normative friendship models of intimacy and gender expectations under a heteropatriarchal system of love, challenges the romance-centric narrative framework of Shōjo manga, presenting a more realistic portrayal of female experiences. The significance of this study lies in the fact that, by combining Eastern and Western feminist theories, the analysis of NANA presents new imaginations and possibilities regarding female identity and relationships, offering valuable insights for the study of female subjectivity in Japanese popular culture.</p>
+          </div>
+
+          <!-- 出版預備備註 原句 -->
+          <div class="text-slate-700 text-sm font-sans leading-relaxed pt-1">Meanwhile, she has recently completed writings on diaspora issues, body politics, and literature on disability, which are currently being prepared for publication.</div>
+        </div>
+
+      </div>
+
+      <!-- 核心專長與背景 + 關鍵技能標籤 (中英雙語對照) -->
+      <div class="pearl-card p-8 rounded-3xl space-y-6">
+        <div><span class="text-xs font-sans uppercase tracking-wider text-pearl-700 font-semibold block mb-2">興趣 / Interests</span>
+          <p class="text-sm sm:text-base text-slate-800 font-serif leading-relaxed mb-1.5">文學理論、流行文化研究、性別理論、酷兒理論、女性主義、跨文化理論、去殖民研究、離散議題、身體政治等。</p>
+          <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">Literary theory, popular culture studies, gender theory, queer theory, feminism, cross-cultural theory, postcolonial/decolonial studies, diaspora issues, body politics, etc.</p></div>
+
+        <div class="pt-4 border-t border-pearl-200/60">
+          <span class="text-xs font-sans uppercase tracking-wider text-pearl-700 font-semibold block mb-2">技能 / Skills</span>
+          <div class="inline-flex flex-wrap items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-pearl-300 text-slate-800 text-sm shadow-sm font-medium"><div class="flex flex-wrap items-center gap-3"><span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-pearl-300 text-slate-800 text-sm shadow-sm font-medium"><span class="text-pearl-500">✦</span><span class="">書寫 Writing</span></span><span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white border border-pearl-300 text-slate-800 text-sm shadow-sm font-medium"><span class="text-pearl-500">✦</span><span class="">翻譯 Translation</span></span></div></div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3. 作品一覽 (Projects / Works) -->
+    <section id="works" class="py-14 scroll-mt-24">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-sans tracking-widest uppercase text-pearl-600 font-semibold mb-2">
+            <span class="">✨</span>
+            <span class="">02 / Projects &amp; Works · 作品一覽</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-slate-900 font-light">
+            作品一覽 <span class="text-slate-400 text-xl font-display italic font-light ml-2">Projects / Works</span>
+          </h2>
+        </div>
+        
+        <p class="text-xs text-slate-500 font-sans mt-3 md:mt-0 tracking-wider">
+          PUBLICATIONS &amp; COMMENTARIES
+        </p>
+      </div>
+
+      <!-- 分類標籤切換器 -->
+      <div class="flex flex-wrap items-center gap-2 mb-10 pb-2 border-b border-pearl-200/60">
+        <button onclick="filterWorks('all')" id="tab-all" class="filter-tab active px-4 py-2 rounded-full text-xs font-semibold silver-pill border-pearl-400 text-pearl-700 shadow-sm">
+          全部作品 All Works (9)
+        </button>
+        <button onclick="filterWorks('mingpao')" id="tab-mingpao" class="filter-tab px-4 py-2 rounded-full text-xs font-medium text-slate-600 hover:text-pearl-600 transition-colors">
+          明報副刊·回答 A to Z 系列 Ming Pao (7)
+        </button>
+        <button onclick="filterWorks('taiwan-insight')" id="tab-taiwan-insight" class="filter-tab px-4 py-2 rounded-full text-xs font-medium text-slate-600 hover:text-pearl-600 transition-colors">
+          英文學術評論 Academic (1)
+        </button>
+        <button onclick="filterWorks('literary')" id="tab-literary" class="filter-tab px-4 py-2 rounded-full text-xs font-medium text-slate-600 hover:text-pearl-600 transition-colors">
+          散文詩 Poetry (1)
+        </button>
+      </div>
+
+      <!-- 作品網格 -->
+      <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 1. 英文作品：Queer utopia shaped by gender and sexuality -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="taiwan-insight">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="text-purple-700 font-sans font-semibold px-2.5 py-0.5 rounded-full bg-purple-100/80 border border-purple-200">
+                英文作品 English Paper
+              </span>
+              <span class="font-sans">15 Sep 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-sans tracking-wide text-slate-500 uppercase font-medium">Taiwan Insight, United Kingdom</span>
+            </div>
+
+            <h3 class="font-sans text-base text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-4">
+              Queer utopia shaped by gender and sexuality: Through the lens of the father–Son relationship in Pai Hsien-yung (白先勇)’s novel Crystal Boys (孽子)
+            </h3><div class="text-xs text-slate-600 font-sans mb-3 pb-2 border-b border-pearl-100/60"><p class="">類型﹕學術寫作 <span class="text-slate-500">(Genre: Academic writing)</span></p></div><p class="text-xs text-slate-600 font-sans leading-relaxed mb-4">Phoenix Fung Lam Chan analyses Pai Hsien-yung’s Crystal Boys, showing how the novel depicts the repression of homosexuality within patriarchal families while presenting New Park as an alternative space of queer community and kinship.</p>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://taiwaninsight.org/2026/09/15/queer-utopia-shaped-by-gender-and-sexuality-through-the-lens-of-the-father-son-relationship-in-pai-hsien-yung-%e7%99%bd%e5%85%88%e5%8b%87s-novel-crystal-boys-%e5%ad%bd%e5%ad%90/" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 2. 中文作品：火繼續燒 Burning fire -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="literary"><div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="text-pearl-700 font-sans font-semibold px-2.5 py-0.5 rounded-full bg-pearl-100/80 border border-pearl-200">
+                散文詩 Prose Poetry
+              </span>
+              <span class="font-sans">10.2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">小說與詩，香港 Novels and Poetry, Hong Kong Literary Newspaper Platform</span>
+            </div>
+
+            <h3 class="font-serif text-xl text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-2">
+              火繼續燒 <span class="text-sm font-sans font-normal text-slate-500 block sm:inline sm:ml-1">Burning fire</span>
+            </h3>
+
+            <div class="text-xs text-slate-600 font-serif space-y-1 mb-4">
+              <p class="">類型﹕散文詩 <span class="font-sans text-slate-500">(Genre: Prose Poetry)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://ngaipc.blogspot.com/2026/10/" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div></article>
+
+        <!-- 3. 回答A to Z系列：B：Bus 巴士 -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · B
+              </span>
+              <span class="font-sans">12 Jul 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">回答A to Z系列：B-Bus巴士——排隊有序如何養成？</h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: B: Bus — How Was Orderly Queuing Cultivated?
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20260712/s00005/1783785633564/%E5%9B%9E%E7%AD%94a-to-z%E7%B3%BB%E5%88%97-b-bus%E5%B7%B4%E5%A3%AB-%E6%8E%92%E9%9A%8A%E6%9C%89%E5%BA%8F%E5%A6%82%E4%BD%95%E9%A4%8A%E6%88%90" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. 回答A to Z系列：C：Cassette 卡式帶 -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · C
+              </span>
+              <span class="font-sans">26 Jul 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">
+              回答A to Z系列：C：Cassette 卡式帶——不方便的舊技術 新潮流的小玩意
+            </h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: C: Cassette — The Inconvenient Relic, The Chic Novelty
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20260726/s00005/1784997014451/%E5%9B%9E%E7%AD%94a-to-z%E7%B3%BB%E5%88%97-c-cassette%E5%8D%A1%E5%BC%8F%E5%B8%B6-%E4%B8%8D%E6%96%B9%E4%BE%BF%E7%9A%84%E8%88%8A%E6%8A%80%E8%A1%93-%E6%96%B0%E6%BD%AE%E6%B5%81%E7%9A%84%E5%B0%8F%E7%8E%A9%E6%84%8F" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 5. 回答A to Z系列：D：Disco -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · D
+              </span>
+              <span class="font-sans">16 Aug 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">回答A to Z系列：D-Disco 自在舞池 各有各玩法</h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: D: Disco — The Unrestrained Dance Floor, To Each Their Own Rhythm
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%e5%89%af%e5%88%8a/article/20260816/s00005/1786810105791/%e5%9b%9e%e7%ad%94a-to-z%e7%b3%bb%e5%88%97-d-disco-%e8%87%aa%e5%9c%a8%e8%88%9e%e6%b1%a0-%e5%90%84%e6%9c%89%e5%90%84%e7%8e%a9%e6%b3%95" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 6. 回答A to Z系列：F：Film Camera 菲林相機 -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · F
+              </span>
+              <span class="font-sans">13 Sep 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">
+              回答A to Z系列：F：Film Camera 菲林相機——快門一按 留下了什麼
+            </h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: F: Film Camera — With a Click of the Shutter, What Remains?
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20260913/s00005/1789229609388/%E5%9B%9E%E7%AD%94a-to-z%E7%B3%BB%E5%88%97-f-film-camera-%E5%BF%AB%E9%96%80%E4%B8%80%E6%8C%89-%E7%95%99%E4%B8%8B%E4%BA%86%E4%BB%80%E9%BA%BC" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 7. 回答A to Z系列：G：Goldfish & Goldfish Street 金魚和金魚街 -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · G
+              </span>
+              <span class="font-sans">27 Sep 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">
+              回答A to Z系列：G：Goldfish Goldfish Street 金魚和金魚街——愛一條魚 需要什麼
+            </h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: G: Goldfish &amp; Goldfish Street — What Does It Take to Love a Fish?
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%E5%89%AF%E5%88%8A/article/20260927/s00005/1790438479924/%E5%9B%9E%E7%AD%94a-to-z%E7%B3%BB%E5%88%97-g-goldfish-goldfish-street-%E9%87%91%E9%AD%9A%E5%92%8C%E9%87%91%E9%AD%9A%E8%A1%97-%E6%84%9B%E4%B8%80%E6%A2%9D%E9%AD%9A-%E9%9C%80%E8%A6%81%E4%BB%80%E9%BA%BC" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. 回答A to Z系列：H：Home Economics 家政 -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · H
+              </span>
+              <span class="font-sans">11 Oct 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報 OL / 文化，香港 Ming Pao Cultural Leisure, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">
+              回答A to Z系列：H：Home Economics 家政——生活這一門沒有畢業的課
+            </h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: H: Home Economics — Life, a Course Without Graduation
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://ol.mingpao.com/ldy/cultureleisure/culture/20261011/1791649268714/%E5%9B%9E%E7%AD%94a-to-z%E7%B3%BB%E5%88%97-h-home-economics-%E7%94%9F%E6%B4%BB%E9%80%99%E4%B8%80%E9%96%80%E6%B2%92%E6%9C%89%E7%95%A2%E6%A5%AD%E7%9A%84%E8%AA%B2" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- 9. 回答A to Z系列：I：ICQ -->
+        <article class="work-item pearl-card rounded-3xl p-6 flex flex-col justify-between group" data-category="mingpao">
+          <div>
+            <div class="flex items-center justify-between text-xs font-sans text-slate-400 mb-3 pb-3 border-b border-pearl-100">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-sans font-bold bg-white border border-pearl-300 text-pearl-700 shadow-sm">
+                A to Z · I
+              </span>
+              <span class="font-sans">25 Oct 2026</span>
+            </div>
+
+            <div class="mb-3">
+              <span class="text-[11px] font-serif text-slate-500 font-medium">明報副刊-星期日生活，香港 Ming Pao Supplement - Sunday Life, Hong Kong</span>
+            </div>
+
+            <h3 class="font-serif text-lg text-slate-900 font-semibold leading-snug group-hover:text-pearl-600 transition-colors mb-1">
+              回答A to Z系列：I：ICQ 當我們的日常，今天已成歷史
+            </h3>
+            <p class="text-xs text-pearl-700 font-sans mb-4 font-normal">
+              Answering A to Z Series: I: ICQ — When Our Daily Routine Has Become History
+            </p>
+
+            <div class="text-xs text-slate-600 space-y-1 mb-4 pb-3 border-b border-pearl-100/60 font-serif">
+              <p class="">類型﹕文化評論 <span class="font-sans text-slate-500">(Genre: Cultural Commentary)</span></p>
+              <p class="">職位﹕共同作者 <span class="font-sans text-slate-500">(Role: Co-Author)</span></p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <a href="https://news.mingpao.com/pns/%e5%89%af%e5%88%8a/article/20261025/s00005/1792858576924" target="_blank" rel="noopener noreferrer" class="silver-pill w-full py-2.5 rounded-2xl flex items-center justify-center gap-2 text-xs text-slate-700 font-medium">
+              <span class="">查閱連結 View Link</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-pearl-500"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 4. 更多作品 (More Works) -->
+    <section id="more-works" class="py-10">
+      <div class="pearl-card p-8 md:p-12 rounded-3xl relative overflow-hidden bg-gradient-to-r from-white/95 via-pearl-50/85 to-white/95 border-2 border-white/95">
+        <div class="absolute -right-16 -top-16 w-60 h-60 rounded-full bg-pearl-300/35 blur-2xl pointer-events-none"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 text-center md:text-left max-w-xl">
+            <div class="inline-flex items-center gap-2 text-xs font-sans uppercase tracking-wider text-pearl-600 font-semibold">
+              <i class="fa-brands fa-medium"></i>
+              <span class="">更多作品 / More Works</span>
+            </div>
+            
+            <!-- 中文原句 -->
+            <p class="font-serif text-lg sm:text-xl text-slate-800 leading-snug">
+              不定期在Medium作創作的更新，歡迎追蹤
+            </p>
+            
+            <!-- 英文對照 -->
+            <p class="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed">
+              I update my content on Medium irregularly; feel free to follow me.
+            </p>
+
+            <div class="pt-1">
+              <a href="https://medium.com/@PhoenixFLC" target="_blank" rel="noopener noreferrer" class="font-sans text-xs text-pearl-700 hover:underline">
+                https://medium.com/@PhoenixFLC
+              </a>
+            </div>
+          </div>
+
+          <a href="https://medium.com/@PhoenixFLC" target="_blank" rel="noopener noreferrer" class="pearl-glow-btn text-white px-8 py-3.5 rounded-full font-medium text-xs sm:text-sm flex items-center gap-3 shrink-0 shadow-lg">
+            <i class="fa-brands fa-medium text-base"></i>
+            <span class="">Follow on Medium</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. 聯絡方式與合作邀請 (Contact & Call-To-Action) -->
+    <section id="contact" class="py-14 scroll-mt-24"><div class="max-w-3xl mx-auto text-center space-y-8">
+        <div class="space-y-2">
+          <div class="inline-flex items-center gap-2 text-xs font-sans tracking-widest uppercase text-pearl-600 font-semibold">
+            <span class="">✧</span>
+            <span class="">03 / CONTACT &amp; CALL-TO-ACTION · 聯絡方式</span>
+          </div>
+          <h2 class="author-name-prominent text-3xl sm:text-4xl md:text-5xl font-serif font-bold tracking-wide">
+            聯絡方式與合作邀請
+          </h2>
+          <p class="classic-garamond-sub text-lg sm:text-xl text-slate-400 italic font-display tracking-wider">Read again and again, I write on and on.</p>
+        </div>
+
+        <!-- 電郵與複製卡片 -->
+        <div class="pearl-card p-8 sm:p-10 rounded-3xl max-w-xl mx-auto flex flex-col items-center gap-3 shadow-lg">
+          <span class="text-[11px] font-sans uppercase tracking-widest text-slate-400 font-medium">聯絡電郵 EMAIL</span>
+          
+          <a href="mailto:chanfunglamwork@gmail.com" class="font-display italic text-xl sm:text-2xl text-slate-800 hover:text-pearl-600 transition-colors tracking-wider font-medium break-all my-1">chanfunglamwork@gmail.com</a>
+
+          <div class="flex flex-wrap items-center justify-center gap-3 w-full pt-3">
+            <button onclick="copyEmail()" id="copy-btn" class="silver-pill px-5 py-2.5 rounded-full text-xs text-slate-700 font-medium flex items-center gap-2 cursor-pointer">
+              <i class="fa-regular fa-copy text-pearl-500"></i>
+              <span id="copy-text" class="">複製電郵地址</span>
+            </button>
+            
+            <a href="mailto:chanfunglamwork@gmail.com" class="silver-pill px-5 py-2.5 rounded-full text-xs text-slate-700 font-medium flex items-center gap-2">
+              <i class="fa-regular fa-envelope text-pearl-500"></i>
+              <span class="">發送電郵</span>
+            </a>
+          </div>
+
+          <div id="copy-feedback" class="text-[11px] text-pearl-600 font-medium hidden pt-1">
+            ✨ 已成功複製電郵地址到剪貼簿！ (Email copied to clipboard!)
+          </div>
+        </div>
+
+        <!-- 社群連結按鈕：LinkedIn & Medium -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="https://www.linkedin.com/in/phoenix-fung-lam-c-1b8b14326" target="_blank" rel="noopener noreferrer" class="silver-pill px-5 py-2.5 rounded-full text-xs text-slate-700 font-medium flex items-center gap-2.5">
+            <i class="fa-brands fa-linkedin text-blue-600 text-sm"></i>
+            <span class="">Linkedin: www.linkedin.com/in/phoenix-fung-lam-c-1b8b14326</span>
+          </a>
+          <a href="https://medium.com/@PhoenixFLC" target="_blank" rel="noopener noreferrer" class="silver-pill px-5 py-2.5 rounded-full text-xs text-slate-700 font-medium flex items-center gap-2.5">
+            <i class="fa-brands fa-medium text-slate-900 text-sm"></i>
+            <span class="">Medium: @PhoenixFLC</span>
+          </a>
+        </div>
+
+        <!-- 所在地區標語 -->
+        <div class="pt-4 text-xs sm:text-sm font-sans text-slate-600 tracking-wide">
+          <p class="">Based in London. Back and Forth to Hong Kong, Macao and Taiwan</p>
+        </div>
+      </div></section>
+
+  </main>
+
+  <!-- 頁尾 (Footer) -->
+  <footer class="border-t border-white/80 bg-white/50 backdrop-blur-md py-10 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto px-6 space-y-2">
+      <p class="font-serif italic text-slate-600 text-sm">
+        「一讀再讀，我一寫再寫」
+      </p>
+      <p class="font-display italic text-xs text-pearl-600">Read again and again, I write on and on.</p>
+      <p class="font-sans text-[11px] text-slate-400 pt-2">
+        © <span id="current-year" class="">2026</span> Phoenix, Fung Lam Chan 陳鳳琳. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 互動腳本：分類切換、剪貼簿與星芒粒子畫布動畫 -->
+  <script>
+    // 自動年份
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // 作品分類篩選 (精準相應 4 大 Tab)
+    function filterWorks(category) {
+      const items = document.querySelectorAll('.work-item');
+      const tabs = document.querySelectorAll('.filter-tab');
+
+      tabs.forEach(tab => {
+        tab.className = 'filter-tab px-4 py-2 rounded-full text-xs font-medium text-slate-600 hover:text-pearl-600 transition-colors';
+      });
+
+      const activeTab = document.getElementById(`tab-${category}`);
+      if (activeTab) {
+        activeTab.className = 'filter-tab active px-4 py-2 rounded-full text-xs font-semibold silver-pill border-pearl-400 text-pearl-700 shadow-sm';
+      }
+
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // 複製電郵至剪貼簿
+    function copyEmail() {
+      const email = 'chanfunglamwork@gmail.com';
+      const copyTextEl = document.getElementById('copy-text');
+      const feedbackEl = document.getElementById('copy-feedback');
+
+      const tempInput = document.createElement('textarea');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      
+      try {
+        document.execCommand('copy');
+        copyTextEl.textContent = '已複製！ Copied!';
+        feedbackEl.classList.remove('hidden');
+        
+        setTimeout(() => {
+          copyTextEl.textContent = '複製電郵地址 Copy Email';
+          feedbackEl.classList.add('hidden');
+        }, 3000);
+      } catch (err) {
+        console.error('複製失敗', err);
+      }
+      
+      document.body.removeChild(tempInput);
+    }
+
+    // 珠光星芒粒子畫布 (Mother-of-Pearl Sparkle Stars Canvas)
+    (function initSparkleCanvas() {
+      const canvas = document.getElementById('sparkle-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      // 粒子配置 (珠光、粉、銀紫微光)
+      const particleCount = 45;
+      const particles = [];
+      const colors = [
+        'rgba(255, 62, 136, ',   // Rose neon
+        'rgba(214, 34, 98, ',    // Deep magenta pearl
+        'rgba(203, 213, 225, ',  // Liquid silver
+        'rgba(255, 164, 199, ',  // Soft rose
+        'rgba(192, 132, 252, '   // Lavender
+      ];
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          size: Math.random() * 2.5 + 0.8,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          alpha: Math.random() * 0.7 + 0.2,
+          speedAlpha: (Math.random() * 0.02 + 0.005) * (Math.random() > 0.5 ? 1 : -1),
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+          isStar: Math.random() > 0.4
+        });
+      }
+
+      function drawStar(cx, cy, spikes, outerRadius, innerRadius, alpha, color) {
+        let rot = Math.PI / 2 * 3;
+        let x = cx;
+        let y = cy;
+        const step = Math.PI / spikes;
+
+        ctx.beginPath();
+        ctx.moveTo(cx, cy - outerRadius);
+        for (let i = 0; i < spikes; i++) {
+          x = cx + Math.cos(rot) * outerRadius;
+          y = cy + Math.sin(rot) * outerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+
+          x = cx + Math.cos(rot) * innerRadius;
+          y = cy + Math.sin(rot) * innerRadius;
+          ctx.lineTo(x, y);
+          rot += step;
+        }
+        ctx.lineTo(cx, cy - outerRadius);
+        ctx.closePath();
+        ctx.fillStyle = color + alpha + ')';
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = color + '0.8)';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+
+      function render() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+
+          p.alpha += p.speedAlpha;
+          if (p.alpha <= 0.1 || p.alpha >= 0.85) {
+            p.speedAlpha = -p.speedAlpha;
+          }
+
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          if (p.isStar) {
+            drawStar(p.x, p.y, 4, p.size * 2.8, p.size * 0.8, p.alpha, p.color);
+          } else {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color + p.alpha + ')';
+            ctx.shadowBlur = 8;
+            ctx.shadowColor = p.color + '0.7)';
+            ctx.fill();
+            ctx.shadowBlur = 0;
+          }
+        }
+
+        requestAnimationFrame(render);
+      }
+
+      render();
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
